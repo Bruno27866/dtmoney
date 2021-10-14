@@ -5,7 +5,7 @@ import { App } from './App';
 
 createServer({
   models: {
-    transaction: Model, 
+    transaction: Model,
   },
 
   seeds(server) {
@@ -17,15 +17,15 @@ createServer({
           type: 'deposit',
           category: 'Test',
           amount: 1000,
-          createdAt: new Date('1900-01-01 00:00:01'),
+          createdAt: new Date('2000-01-01 00:00:01'),
         },
         {
           id: 2,
           title: 'Test2',
           type: 'withdraw',
           category: 'Test2',
-          amount: 2000,
-          createdAt: new Date('1900-01-01 00:00:02'),
+          amount: 500,
+          createdAt: new Date('2000-01-01 00:00:02'),
         }
       ],
     })

@@ -23,7 +23,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }:
 
         const data = {
             title,
-            value, 
+            value,
             category,
             type,
         };
@@ -46,13 +46,13 @@ export function NewTransactionModal({ isOpen, onRequestClose }:
             </button>
             <Container onSubmit={handleCreateNewTransaction}>
                 <h2>Cadastrar transação</h2>
-                <input 
+                <input
                     placeholder="Título"
                     value={title}
                     onChange={event => setTitle(event.target.value)}
                 />
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     placeholder="Valor"
                     value={value}
                     onChange={event => setValeu(Number(event.target.value))}
@@ -60,25 +60,25 @@ export function NewTransactionModal({ isOpen, onRequestClose }:
                 <TransactionTypeContainer>
                     <RadioBox
                         type="button"
-                        onClick={() => {setType('deposit');}}
+                        onClick={() => { setType('deposit'); }}
                         isActive={type === 'deposit'}
                         activeColor="green"
-                        >
+                    >
                         <img src={entradaImg} alt="Entrada" />
                         <span>Entrada</span>
                     </RadioBox>
                     <RadioBox
                         type="button"
-                        onClick={() => {setType('withdraw');}}
+                        onClick={() => { setType('withdraw'); }}
                         isActive={type === 'withdraw'}
                         activeColor="red"
-                        >
+                    >
                         <img src={saidaImg} alt="Saída" />
                         <span>Saída</span>
                     </RadioBox>
                 </TransactionTypeContainer>
-                <input 
-                    placeholder="Categoria" 
+                <input
+                    placeholder="Categoria"
                     value={category}
                     onChange={event => setCategory(event.target.value)}
                 />
