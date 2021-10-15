@@ -41,13 +41,12 @@ export function TransactionTabel() {
                             </td>
                             <td>{transaction.category}</td>
                             <td>
-                            {new Intl.DateTimeFormat('pt-BR', {}).format(
-                                new Date(transaction.createdAt)
-                            )}
+                                {new Intl.DateTimeFormat('pt-BR', {}).format(
+                                    new Date(transaction.createdAt)
+                                )}
                             </td>
                         </tr>
-                    )
-                    )}
+                    ))}
                 </tbody>
             </table>
         </Container>

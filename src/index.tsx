@@ -7,15 +7,14 @@ createServer({
   models: {
     transaction: Model,
   },
-
   seeds(server) {
     server.db.loadData({
       transactions: [
         {
           id: 1,
-          title: 'Test',
+          title: 'Test1',
           type: 'deposit',
-          category: 'Test',
+          category: 'Test1',
           amount: 1000,
           createdAt: new Date('2000-01-01 00:00:01'),
         },
@@ -30,7 +29,6 @@ createServer({
       ],
     })
   },
-
   routes() {
     this.namespace = 'api';
     this.get('/transactions', () => {
@@ -39,7 +37,7 @@ createServer({
 
     this.post('/transactions', (schema, request) => {
       const data = JSON.parse(request.requestBody)
-      return schema.create('transaction', data)
+      return schema.create('transactions', data)
     })
   }
 })
